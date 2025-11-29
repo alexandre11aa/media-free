@@ -1,0 +1,35 @@
+/* Aumentar a altura da barra de navegação */
+.navbar-custom {
+    height: 80px; /* Ajuste conforme necessário */
+    background-color: #6e5029; /* Mudar cor da barra */
+}
+
+/* Mudar a cor dos links da barra de navegação */
+.navbar-custom .nav-link {
+    color: #dc9656;
+    font-family: 'Josefin Sans', sans-serif; /* Adicionar a nova fonte */
+}
+
+/* Cor dos links ao passar o mouse */
+.navbar-custom .nav-link:hover {
+    color: #f5d2aa;
+}
+
+/* Mudar a cor dos botões */
+.navbar-custom .btn {
+    background-color: #d3af86; /* Cor de fundo dos botões */
+    color: #98676a; /* Cor do texto dos botões */
+    border: none; /* Remover borda */
+}
+
+/* Mudar a cor dos botões ao passar o mouse */
+.navbar-custom .btn:hover {
+    background-color: #f5d2aa; /* Cor de fundo ao passar o mouse */
+    color: #98676a; /* Cor do texto ao passar o mouse */
+}
+
+/* Diminuir o tamanho da imagem da marca */
+.navbar-brand img {
+    height: 70px; /* Ajuste conforme necessário */
+    width: auto; /* Mantém a proporção */
+}

@@ -1,0 +1,114 @@
+{% extends 'common/base.html' %}
+
+{% load static %}
+
+{% block content %}
+    
+</head>
+
+<body style="background-color: #221a0f;">
+
+    {% include 'partials/_header.html' %}
+
+    <div class="container mt-4">
+        <h4 class="movie-type">{{ details.name }}</h4>
+
+        <div class="row">
+            <div class="col-md-3">
+                <img src="{{ details.poster }}" alt="{{ details.name }}" class="img-fluid rounded-img">
+            </div>
+
+            <div class="col-md-8">
+
+                <p>
+                    <strong style="color: white; color: #F5D2AA;">Nome Original:</strong>
+                    <span style="color: white; color: #F5D2AA;">{{ details.original_name }}</span>
+                </p>
+
+                <p>
+                    <strong style="color: white; color: #F5D2AA;">Direção:</strong>
+                    <span style="color: white; color: #F5D2AA;">{{ details.direction }}</span>
+                </p>
+
+                <p>
+                    <strong style="color: white; color: #F5D2AA;">Duração:</strong>
+                    <span style="color: white; color: #F5D2AA;">{{ details.duration }}</span>
+                </p>
+
+                <p>
+                    <strong style="color: white; color: #F5D2AA;">IMDB:</strong>
+                    <span style="color: white; color: #F5D2AA;">{{ details.imdb }}</span>
+                </p>
+
+                <p>
+                    <strong style="color: white; color: #F5D2AA;">Idioma:</strong>
+                    <span style="color: white; color: #F5D2AA;">{{ details.language }}</span>
+                </p>
+
+                <p>
+                    <strong style="color: white; color: #F5D2AA;">Qualidade:</strong>
+                    <span style="color: white; color: #F5D2AA;">{{ details.quality }}</span>
+                </p>
+
+                <p>
+                    <strong style="color: white; color: #F5D2AA;">Sinopse:</strong>
+                    <span style="color: white; color: #F5D2AA;">{{ details.synopsis }}</span>
+                </p>
+
+                <p>
+                    <strong style="color: white; color: #F5D2AA;">Ano de Lançamento:</strong>
+                    <span style="color: white; color: #F5D2AA;">{{ details.year }}</span>
+                </p>
+
+                <p>
+                    <strong style="color: white; color: #F5D2AA;">Palavras-chave:</strong>
+                    <span style="color: white; color: #F5D2AA;">
+                        {{ details.keyword_1 }}, {{ details.keyword_2 }}, {{ details.keyword_3 }}
+                    </span>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <h4 class="movie-type">Trailer</h4>
+
+        <div class="video-container mt-4" style="display: flex; justify-content: center;">
+            {% if trailer_embed_url %}
+                <iframe 
+                    src="{{ trailer_embed_url }}" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    style="width: 90%; height: 500px; border-radius: 10px;">
+                </iframe>
+            {% else %}
+                <p>Vídeo não disponível</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <h4 class="movie-type">Filme</h4>
+
+        <div class="video-container mt-4" style="display: flex; justify-content: center;">
+            {% if movie_embed_url %}
+                <iframe 
+                    src="{{ movie_embed_url }}" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    style="width: 90%; height: 500px; border-radius: 10px;">
+                </iframe>
+            {% else %}
+                <p>Vídeo não disponível</p>
+            {% endif %}
+        </div>
+    </div>
+
+    {% include 'partials/_footer.html' %}
+    
+{% endblock content %}

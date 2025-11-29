@@ -1,0 +1,86 @@
+.movielist-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 10 colunas */
+    gap: 10px; /* Espaço entre os itens */
+    grid-auto-rows: auto;
+    background-color: #6e5029; /* Cor de fundo clara atrás das imagens */
+    border-radius: 8px; /* Arredondamento dos cantos do fundo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve ao fundo */
+    padding: 10px; /* Espaçamento interno */
+    overflow: hidden; /* Evita que o conteúdo ultrapasse o contêiner */
+}
+
+.movielist-item {
+    background-color: #d3af86;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 375px; /* Altura fixa dos itens */
+}
+
+.movielist-poster-container {
+    width: 100%;
+    overflow: hidden; /* Garante que a imagem não ultrapasse o contêiner */
+}
+
+.movielist-poster {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Arredondamento dos cantos das imagens */
+    display: block; /* Remove espaçamento indesejado em torno da imagem */
+}
+
+.movielist-title {
+    text-align: center;
+    margin-top: 5px;
+    color: #98676a; /* Cor do texto para contraste com o fundo escuro */
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Alinha verticalmente, se necessário */
+    margin-top: 10px;
+}
+
+.pagination-button {
+    background-color: #d3af86; /* Cor de fundo dos botões */
+    color: #98676a; /* Cor do texto dos botões */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.pagination-button:hover {
+    background-color: #f5d2aa; /* Cor de fundo ao passar o mouse sobre os botões */
+}
+
+.page-numbers {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.page-number {
+    background-color: #d3af86; /* Cor de fundo dos números das páginas */
+    color: #98676a; /* Cor do texto dos números das páginas */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 0 2px;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.page-number:hover {
+    background-color: #f5d2aa; /* Cor de fundo ao passar o mouse sobre os números das páginas */
+}
+
+.page-number.active {
+    background-color: #bd9a73; /* Cor de fundo para a página ativa */
+}

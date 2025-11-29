@@ -1,0 +1,38 @@
+{% extends 'common/base.html' %}
+
+{% load static %}
+
+{% block content %}
+    
+</head>
+
+<body style="background-color: #221a0f;">
+
+    {% include 'partials/_header.html' %}
+
+    <div class="content">
+        <div class="container mt-4">
+            <h5 class="movie-type">RESULTADOS PARA PESQUISA POR: {{ query }}</h5>
+
+            <div class="movielist-grid" id="movielistGrid">
+                {% for movielist in search_movies %}
+                    <a href="{% url 'movie_select' movielist.id %}" class="movielist-item">
+                        <div class="movielist-poster-container">
+                            <img src="{{ movielist.poster }}" alt="{{ movielist.title }}" class="movielist-poster">
+                        </div>
+                        <div class="movielist-title">{{ movielist.name }}</div>
+                    </a>
+                {% endfor %}
+            </div>
+
+            <div class="pagination">
+                <button class="pagination-button" onclick="changePage(-1)">Anterior</button>
+                <div id="pageNumbers" class="page-numbers"></div>
+                <button class="pagination-button" onclick="changePage(1)">Próximo</button>
+            </div>
+        </div>
+    </div>
+
+    {% include 'partials/_footer.html' %}
+    
+{% endblock content %}

@@ -1,0 +1,67 @@
+{% extends 'common/base.html' %}
+
+{% load static %}
+
+{% block content %}
+    
+</head>
+
+<body style="background-color: #221a0f;">
+
+    {% include 'partials/_header.html' %}
+
+    <div class="container mt-4">
+        <h5 class="movie-type">LANÇAMENTOS EM DESTAQUE</h5>
+
+        <div class="movie-bar">
+            <div class="movie-items-container slick-carousel">
+                {% for movie in last_movies %}
+                    <div class="movie-item">
+                        <a href="{% url 'movie_select' movie.id %}">
+                            <div class="movie-poster-container">
+                                <img src="{{ movie.poster }}" alt="{{ movie.title }}" class="movie-poster">
+                                <div class="movie-title">{{ movie.title }}</div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+                {% for movie in last_movies %}
+                    <div class="movie-item">
+                        <a href="{% url 'movie_select' movie.id %}">
+                            <div class="movie-poster-container">
+                                <img src="{{ movie.poster }}" alt="{{ movie.title }}" class="movie-poster">
+                                <div class="movie-title">{{ movie.title }}</div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <h5 class="movie-type">CATÁLOGO DE FILMES</h5>
+    
+        <div class="movielist-grid" id="movielistGrid">
+            {% for movielist in total_movies %}
+                <a href="{% url 'movie_select' movielist.id %}" class="movielist-item">
+                    <div class="movielist-poster-container">
+                        <img src="{{ movielist.poster }}" alt="{{ movielist.title }}" class="movielist-poster">
+                    </div>
+                    <div class="movielist-title">{{ movielist.name }}</div>
+                </a>
+            {% endfor %}
+        </div>
+    
+        <div class="pagination">
+            <button class="pagination-button" onclick="changePage(-1)">Anterior</button>
+            <div id="pageNumbers" class="page-numbers"></div>
+            <button class="pagination-button" onclick="changePage(1)">Próximo</button>
+        </div>
+    </div>
+
+    {% include 'partials/_footer.html' %}
+    
+    <script src="{% static 'movies/js/movies_carousel.js' %}"></script>
+
+{% endblock content %}
