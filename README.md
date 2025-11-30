@@ -1,6 +1,6 @@
 # Media Free
 
-Site agregador de midias gratuitas em Python, Django, Javascript e Bootstrap. É possível acessar o [modelo]() do site hospedado através do PythonAnywhere.
+Site agregador de midias gratuitas em Python, Django, Javascript e Bootstrap. É possível acessar o [caminho](https://mediafree.pythonanywhere.com/) do site hospedado através do PythonAnywhere.
 
 ![Media Free](core/static/movies/img/index/media_free_3d_logo.png)
 
@@ -15,16 +15,10 @@ Site agregador de midias gratuitas em Python, Django, Javascript e Bootstrap. É
 1. Clone o repositório:
 
 ```shell
-$ git clone https://github.com/alexandre11aa/
+$ git clone https://github.com/alexandre11aa/media-free.git
 ```
 
-2. Siga para a branch `prod`:
-
-```shell
-$ git checkout prod
-```
-
-3. Declare um novo `DEBUG` em *core/core/settings.py*:
+2. Declare um novo `DEBUG` em *core/core/settings.py*:
 
 ```python
 ...
@@ -34,7 +28,7 @@ $ git checkout prod
 ...
 ```
 
-4. Declare um novo `ALLOWED_HOSTS` em *core/core/settings.py*:
+3. Declare um novo `ALLOWED_HOSTS` em *core/core/settings.py*:
 
 ```python
 ...
@@ -44,40 +38,40 @@ $ git checkout prod
 ...
 ```
 
-5. Siga para o diretório *core/core/* e crie um ambiente virtual:
+4. Siga para o diretório *core/core/* e crie um ambiente virtual:
 
 ```shel
 $ cd core
 $ python3 -m venv env
 ```
 
-6. Ative o ambiente virtual e instale as dependências:
+5. Ative o ambiente virtual e instale as dependências:
 
 ```shel
 $ source env/bin/activate
 $ pip install -r requirements.txt
 ```
 
-7. Faça as migrações do banco de dados:
+6. Faça as migrações do banco de dados:
 
 ```shel
 $ python3 manage.py makemigrations
 $ python3 manage.py migrate
 ```
 
-8. Colete os arquivos estáticos:
+7. Colete os arquivos estáticos:
 
 ```shel
 $ python3 manage.py collectstatic
 ```
 
-9. Inicie o servidor local Django:
+8. Inicie o servidor local Django:
 
 ```shell
 $ python3 manage.py runserver
 ```
 
-10. Acesse a aplicação no navegador:
+- Acesse a aplicação no navegador:
 
 ```shell
 http://localhost:8000
@@ -87,4 +81,4 @@ http://localhost:8000
 
 A aplicação está hospedada no PythonAnywhere, podendo ser acessada através de:
 
-🔗 
+🔗 https://mediafree.pythonanywhere.com/
