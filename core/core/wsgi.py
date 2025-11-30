@@ -1,5 +1,5 @@
 """
-WSGI config for rainscale project.
+WSGI config for mediafree project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

@@ -1,5 +1,5 @@
 """
-ASGI config for rainscale project.
+ASGI config for mediafree project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
