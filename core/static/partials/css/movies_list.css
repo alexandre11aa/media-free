@@ -16,19 +16,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 375px; /* Altura fixa dos itens */
+    height: 375px; /* Mantido */
+    overflow: hidden; /* Evita vazamentos */
 }
 
 .movielist-poster-container {
-    width: 100%;
-    overflow: hidden; /* Garante que a imagem não ultrapasse o contêiner */
+    width: 100%; /* Ocupa 100% da largura do item */
+    height: 300px; /* Altura fixa para padronizar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .movielist-poster {
     width: 100%;
-    height: auto;
-    border-radius: 8px; /* Arredondamento dos cantos das imagens */
-    display: block; /* Remove espaçamento indesejado em torno da imagem */
+    height: 100%;
+    object-fit: fill; /* Estica para ocupar tudo */
+    border-radius: 8px;
 }
 
 .movielist-title {

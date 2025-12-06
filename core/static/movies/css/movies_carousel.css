@@ -18,24 +18,20 @@
 }
 
 .movie-poster-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 150px;
+    width: 150px;  /* tamanho padrão desejado */
     height: 225px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 4px;
-    background-color: #000;
     border-radius: 8px;
-    overflow: hidden;
 }
 
 .movie-poster {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill; /* Estica a imagem para caber exatamente */
     border-radius: 8px;
-    display: block;
 }
 
 .movie-title {
@@ -44,7 +40,6 @@
     left: 50%;
     transform: translateX(-50%);
     color: #c47448;
-    background-color: rgba(0, 0, 0, 0.6);
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;
